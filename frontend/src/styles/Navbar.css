@@ -1,0 +1,135 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1b2430;
+  padding: 20px 55px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav > a >img{
+  height: 70px;
+  width: 150px;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 10px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: #c5c5c5;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #c5c5c5;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mobile {
+  display: none;
+}
+
+#mobile i {
+  color: #fff;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px){
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b2430;
+    padding: 20px 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  }
+  #navbar li a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+  }
+}
+/* @media screen and (max-width: 900px){
+  nav > a >img{
+    height: 60px;
+    width: 130px;
+  }
+} */
+
+@media screen and (max-width: 875px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 114px;
+    right: -270px;
+    width: 260px;
+    height: 100vh;
+    background: #2a3239;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  #navbar.active {
+    right: 0px;
+    z-index: 1000;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #navbar li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+  }
+  .login{
+    display:flex;
+    flex-direction: column-reverse;
+    flex-direction: row-reverse;
+    gap: 3px;
+   
+  }
+  #mobile {
+    display: block;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
